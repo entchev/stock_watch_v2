@@ -1,0 +1,405 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: white;
+  font-size: 12px;
+  height: 100%;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  font-weight: 400;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+#root {
+  // 63px for header(43px picture, 10px padding), 40 px for padding
+  height: calc(100% - 63px - 40px);
+}
+
+//                        //
+// HEADER BANNER + LOG IN //
+//                        //
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #073736; 
+  padding: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  height: 50px;
+
+  .title {
+    font-size: 26px;
+    padding-top: 10px;
+    padding-left: 15px;
+        a {
+          color: white;
+        }
+  }
+
+  .title-login {
+    font-size: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    
+  }
+
+  .user-login {
+    font-size: 18px;
+    margin-right: 25px;
+    color: whitesmoke;
+  }
+
+  .logout-button {
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: black;
+  }
+  .portfolio-button {
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: black;
+      a { color: black; }  
+   }
+  }
+
+
+
+  // AUTH BUTTONS //
+
+  .auth-button {
+    margin-right: 20px;
+    background-color: black; 
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    
+      a {
+        color: white;
+      }
+  }
+
+  .auth-button:hover {
+    background-color: grey; 
+    color: black;
+  }
+
+
+//               //
+// LOG IN FORM  //
+//             //
+
+.login-form-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.login-form-container a:visited {
+  color: black;
+}
+
+.login-form-container a:link {
+  color: black;
+}
+
+.session-submit {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+//              //
+// TOP STOCKS  //
+//            //
+
+.stock-index {
+  display: flex; 
+  flex-direction: row-reverse;
+  padding: 0;
+  height: 100%;
+  background-color: white;
+
+  > ul {
+    width: 300px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: scroll;
+    max-height: 82vh;
+    border: 6px solid black;
+    border-radius: 20px;
+    margin-left: 30px;
+
+    > li {
+      a {
+        display: block;
+      }
+
+      &:active {
+        background-color: red;
+      }
+    }
+  }
+}
+
+.stock-index-item {
+  padding: 10px 10px;
+  // border-bottom: 1px solid grey;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightgray;
+  }
+
+  img {
+    width: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:active {
+      background-color: red;
+    }
+  }
+}
+
+.stock-index-item:first-of-type {
+  // border-top: 1px solid grey;
+}
+
+// MAIN SECTION
+
+.stock-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  border-radius: 20px;
+  border: 6px solid black;
+  margin: 0 40px;
+  padding: 20px;
+  max-height: 75vh;
+  overflow: scroll;
+  background-color: lightgrey;
+
+  .index-img {
+    width: 60%;
+    max-height: 200px;
+    border-radius: 20px;
+  }
+
+  figure {
+    border: 4px solid black;
+    border-radius: 20px;
+    width: 86%;
+    padding: 20px;
+    max-height: 400px;
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(
+      315deg,
+      whitesmoke
+      yellow
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+      315deg,
+      whitesmoke
+      yellow
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+      315deg,
+      whitesmoke
+      yellow
+    ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(315deg, whitesmoke yellow); /* Standard syntax */
+  }
+
+  img {
+    width: 60%;
+    max-height: 100px;
+    border-radius: 20px;
+  }
+
+  ul {
+    text-align: center;
+
+    li {
+      font-size: 20px;
+      padding: 10px 0;
+      color: black;
+    }
+  }
+
+  .error {
+    color:  rgb(187, 139, 139);
+    font-size: 12px;
+    font-style: bold;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    font-weight: 300;
+  }
+  .summary {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+}
+  .summary:first-of-type {
+    text-align: center;
+}
+}
+
+// STOCK DETAIL BUTTONS //
+
+.detail-button {
+  margin-right: 30px;
+  background-color:#073736; 
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+// 073736
+.detail-button:hover {
+  background-color: grey; 
+  color: black;
+}
+
+.detail-button{
+  a {
+    color: white;
+  }  
+}
+
+// PORTFOLIO FORM //
+
+ .new-item-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 50px;
+ }
+
+ .new-item-form {
+   display: flex;
+   flex-direction: column;
+   width: 320px;
+   outline: black 1px solid;
+   padding: 5px 30px 10px 30px;
+ }
+
+ .new-item-title {
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 5px;
+ }
+
+ .new-item-button {
+   margin: 5px;
+ }
+
+ input.item-field {
+   margin: 10px;
+   padding: 2px;
+ }
+
+ label.item-field {
+   width: 135px;
+   display: inline-block;
+   font-size: 16px;
+ }
+
+ .button-holder {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+ }
+
+ input.new-item-button {
+   width: 160px;
+   margin-top: 10px;
+ }
+
+ button.new-item-button {
+   width: 160px;
+ }
+
+//  PORTFOLIO PAGE //
+
+table, th, td {
+  padding: 15px;
+}
+
+table {
+  border: 2px solid black;
+  width: 100%;
+}
+
+.table-head {
+  
+  font-style: italic;
+}

@@ -1,0 +1,1 @@
+json.portfolio_items current_user.portfolio_items, :id, :stock_id, :user_id, :name, :symbol, :purchase_price, :amount_owned
