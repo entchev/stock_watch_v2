@@ -41,10 +41,10 @@ class Element extends React.Component {
       <td>{this.props.name}</td>
       <td>{this.props.symbol}</td>
       <td>{amount}</td>
-      <td>{cost}</td>
-      <td>{current_price}</td>
-      <td>{marketValue}</td>
-      <td>{totalGain}</td>
+      <td>${cost}</td>
+      <td>${current_price}</td>
+      <td>${marketValue}</td>
+      <td>${totalGain}</td>
     </tr>
     )
   }

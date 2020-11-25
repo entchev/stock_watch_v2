@@ -29,7 +29,7 @@ class WatchlistElement extends React.Component {
       <tr>
         <td>{this.props.name}</td>
         <td>{this.props.symbol}</td>
-        <td>{current_price}</td>
+        <td>${current_price}</td>
       </tr>
     )
   }
